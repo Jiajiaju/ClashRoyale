@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="960" tileheight="1720" nextobjectid="26">
+ <tileset firstgid="1" name="arena_training_001" tilewidth="800" tileheight="519">
+  <image source="arena_training_001.png" width="800" height="519"/>
+ </tileset>
+ <tileset firstgid="2" name="example" tilewidth="1242" tileheight="2208">
+  <image source="example.png" width="1242" height="2208"/>
+ </tileset>
+ <tileset firstgid="3" name="arena_training_002" tilewidth="800" tileheight="508">
+  <image source="arena_training_002.png" width="800" height="508"/>
+ </tileset>
+ <tileset firstgid="4" name="arena_training_003" tilewidth="942" tileheight="50">
+  <image source="arena_training_003.png" width="942" height="50"/>
+ </tileset>
+ <tileset firstgid="5" name="arena_training_005" tilewidth="800" tileheight="59">
+  <image source="arena_training_005.png" width="800" height="59"/>
+ </tileset>
+ <tileset firstgid="6" name="arena_training_006" tilewidth="800" tileheight="60">
+  <image source="arena_training_006.png" width="800" height="60"/>
+ </tileset>
+ <tileset firstgid="7" name="arena_training_007" tilewidth="800" tileheight="54">
+  <image source="arena_training_007.png" width="800" height="54"/>
+ </tileset>
+ <tileset firstgid="8" name="arena_training_008" tilewidth="800" tileheight="16">
+  <image source="arena_training_008.png" width="800" height="16"/>
+ </tileset>
+ <tileset firstgid="9" name="arena_training_009" tilewidth="25" tileheight="556">
+  <image source="arena_training_009.png" width="25" height="556"/>
+ </tileset>
+ <tileset firstgid="10" name="arena_training_010" tilewidth="24" tileheight="529">
+  <image source="arena_training_010.png" width="24" height="529"/>
+ </tileset>
+ <tileset firstgid="11" name="arena_training_011" tilewidth="24" tileheight="575">
+  <image source="arena_training_011.png" width="24" height="575"/>
+ </tileset>
+ <tileset firstgid="12" name="arena_training_012" tilewidth="28" tileheight="581">
+  <image source="arena_training_012.png" width="28" height="581"/>
+ </tileset>
+ <tileset firstgid="13" name="arena_training_013" tilewidth="79" tileheight="102">
+  <image source="arena_training_013.png" width="79" height="102"/>
+ </tileset>
+ <tileset firstgid="14" name="arena_training_014" tilewidth="88" tileheight="103">
+  <image source="arena_training_014.png" width="88" height="103"/>
+ </tileset>
+ <layer name="layer" width="1" height="1">
+  <data>
+   <tile gid="0"/>
+  </data>
+ </layer>
+ <objectgroup name="example">
+  <object id="5" gid="2" x="0" y="1720" width="960" height="1720"/>
+ </objectgroup>
+ <objectgroup name="map" opacity="0.59">
+  <object id="11" gid="4" x="-0.818182" y="776.212" width="942" height="50"/>
+  <object id="12" gid="1" x="80.6667" y="701.333" width="800" height="519"/>
+  <object id="13" gid="3" x="82.3333" y="1277.67" width="800" height="508"/>
+  <object id="14" gid="5" x="81.3333" y="1333.67" width="800" height="59"/>
+  <object id="15" gid="6" x="81.6667" y="183.333" width="800" height="60"/>
+  <object id="16" gid="7" x="83" y="751" width="800" height="54"/>
+  <object id="17" gid="8" x="81.3333" y="773.333" width="800" height="16"/>
+  <object id="18" gid="9" x="53.3333" y="703.667" width="25" height="556"/>
+  <object id="19" gid="10" x="874.333" y="690" width="24" height="529"/>
+  <object id="21" gid="11" x="882.667" y="1341.67" width="24" height="575"/>
+  <object id="22" gid="12" x="54.3333" y="1342" width="28" height="581"/>
+  <object id="23" gid="13" x="687.333" y="785" width="79" height="102"/>
+  <object id="24" gid="14" x="189" y="785.333" width="88" height="103"/>
+ </objectgroup>
+</map>
