@@ -8,6 +8,8 @@
 #include "GameManager.hpp"
 #include "GameHelper.hpp"
 
+#include "CRImport.hpp"
+
 BattleManager* GameManager::battleManager = nullptr;
 
 void GameManager::prepareGame(){

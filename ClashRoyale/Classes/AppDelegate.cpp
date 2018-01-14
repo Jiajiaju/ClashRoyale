@@ -1,5 +1,5 @@
 #include "AppDelegate.h"
-#include "manager/GameManager.hpp"
+#include "GameManager.hpp"
 
 USING_NS_CC;
 

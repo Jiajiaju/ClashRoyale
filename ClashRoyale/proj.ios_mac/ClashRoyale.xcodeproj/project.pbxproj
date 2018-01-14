@@ -55,6 +55,8 @@
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
+		5459D6BF200B5CEB0034AFCA /* Debuger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5459D6BD200B5CEB0034AFCA /* Debuger.cpp */; };
+		5459D6C8200BAFC60034AFCA /* CRImport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5459D6C6200BAFC60034AFCA /* CRImport.cpp */; };
 		54B4B4FD1FFFD8AF00776BA3 /* BattlegroundLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54B4B4F61FFFD8AF00776BA3 /* BattlegroundLayer.cpp */; };
 		54B4B4FE1FFFD8AF00776BA3 /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54B4B4F91FFFD8AF00776BA3 /* BattleScene.cpp */; };
 		54B4B4FF1FFFD8AF00776BA3 /* BattleUILayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54B4B4FA1FFFD8AF00776BA3 /* BattleUILayer.cpp */; };
@@ -163,6 +165,11 @@
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		5459D6BD200B5CEB0034AFCA /* Debuger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Debuger.cpp; sourceTree = "<group>"; };
+		5459D6BE200B5CEB0034AFCA /* Debuger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Debuger.hpp; sourceTree = "<group>"; };
+		5459D6C1200B86E30034AFCA /* Util.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Util.hpp; sourceTree = "<group>"; };
+		5459D6C6200BAFC60034AFCA /* CRImport.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CRImport.cpp; sourceTree = "<group>"; };
+		5459D6C7200BAFC60034AFCA /* CRImport.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CRImport.hpp; sourceTree = "<group>"; };
 		54B4B4F51FFFD8AF00776BA3 /* BattleUILayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BattleUILayer.hpp; sourceTree = "<group>"; };
 		54B4B4F61FFFD8AF00776BA3 /* BattlegroundLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BattlegroundLayer.cpp; sourceTree = "<group>"; };
 		54B4B4F71FFFD8AF00776BA3 /* BattleMapLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BattleMapLayer.hpp; sourceTree = "<group>"; };
@@ -329,6 +336,9 @@
 			children = (
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
+				5459D6C6200BAFC60034AFCA /* CRImport.cpp */,
+				5459D6C7200BAFC60034AFCA /* CRImport.hpp */,
+				5459D6BB200B5CDD0034AFCA /* debuger */,
 				54B4B50A1FFFD8CA00776BA3 /* helper */,
 				54B4B5081FFFD8C300776BA3 /* util */,
 				54B4B5011FFFD8BA00776BA3 /* manager */,
@@ -385,17 +395,26 @@
 			path = ios;
 			sourceTree = SOURCE_ROOT;
 		};
+		5459D6BB200B5CDD0034AFCA /* debuger */ = {
+			isa = PBXGroup;
+			children = (
+				5459D6BD200B5CEB0034AFCA /* Debuger.cpp */,
+				5459D6BE200B5CEB0034AFCA /* Debuger.hpp */,
+			);
+			path = debuger;
+			sourceTree = "<group>";
+		};
 		54B4B4F41FFFD8AF00776BA3 /* battle */ = {
 			isa = PBXGroup;
 			children = (
 				54B4B4F51FFFD8AF00776BA3 /* BattleUILayer.hpp */,
-				54B4B4F61FFFD8AF00776BA3 /* BattlegroundLayer.cpp */,
-				54B4B4F71FFFD8AF00776BA3 /* BattleMapLayer.hpp */,
-				54B4B4F81FFFD8AF00776BA3 /* BattleScene.hpp */,
-				54B4B4F91FFFD8AF00776BA3 /* BattleScene.cpp */,
 				54B4B4FA1FFFD8AF00776BA3 /* BattleUILayer.cpp */,
 				54B4B4FB1FFFD8AF00776BA3 /* BattlegroundLayer.hpp */,
+				54B4B4F61FFFD8AF00776BA3 /* BattlegroundLayer.cpp */,
+				54B4B4F71FFFD8AF00776BA3 /* BattleMapLayer.hpp */,
 				54B4B4FC1FFFD8AF00776BA3 /* BattleMapLayer.cpp */,
+				54B4B4F81FFFD8AF00776BA3 /* BattleScene.hpp */,
+				54B4B4F91FFFD8AF00776BA3 /* BattleScene.cpp */,
 			);
 			path = battle;
 			sourceTree = "<group>";
@@ -404,9 +423,9 @@
 			isa = PBXGroup;
 			children = (
 				54B4B5021FFFD8BA00776BA3 /* GameManager.hpp */,
-				54B4B5031FFFD8BA00776BA3 /* BattleManager.cpp */,
 				54B4B5041FFFD8BA00776BA3 /* GameManager.cpp */,
 				54B4B5051FFFD8BA00776BA3 /* BattleManager.hpp */,
+				54B4B5031FFFD8BA00776BA3 /* BattleManager.cpp */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -415,6 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				54B4B5091FFFD8C300776BA3 /* Singleton.hpp */,
+				5459D6C1200B86E30034AFCA /* Util.hpp */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -422,10 +442,10 @@
 		54B4B50A1FFFD8CA00776BA3 /* helper */ = {
 			isa = PBXGroup;
 			children = (
-				54B4B50B1FFFD8CA00776BA3 /* BattleArenaHelper.cpp */,
-				54B4B50C1FFFD8CA00776BA3 /* GameHelper.cpp */,
 				54B4B50D1FFFD8CA00776BA3 /* BattleArenaHelper.hpp */,
+				54B4B50B1FFFD8CA00776BA3 /* BattleArenaHelper.cpp */,
 				54B4B50E1FFFD8CA00776BA3 /* GameHelper.hpp */,
+				54B4B50C1FFFD8CA00776BA3 /* GameHelper.cpp */,
 			);
 			path = helper;
 			sourceTree = "<group>";
@@ -580,7 +600,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5459D6BF200B5CEB0034AFCA /* Debuger.cpp in Sources */,
 				54B4B5061FFFD8BA00776BA3 /* BattleManager.cpp in Sources */,
+				5459D6C8200BAFC60034AFCA /* CRImport.cpp in Sources */,
 				54B4B5071FFFD8BA00776BA3 /* GameManager.cpp in Sources */,
 				54B4B4FD1FFFD8AF00776BA3 /* BattlegroundLayer.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
