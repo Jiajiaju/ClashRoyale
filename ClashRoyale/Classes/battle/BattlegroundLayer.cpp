@@ -7,6 +7,8 @@
 
 #include "BattlegroundLayer.hpp"
 
+#include "CRImport.hpp"
+
 USING_NS_CC;
 
 BattlegroundLayer* BattlegroundLayer::createBattlegroundLayer(){
@@ -24,12 +26,38 @@ bool BattlegroundLayer::init(){
     }
     
     auto visibleSize = Director::getInstance()->getVisibleSize();
+    std::map<int, std::string> sourceInfo;
     
-    auto test = Sprite::create("res/design.png");
-    test->setPosition(visibleSize.width / 2, 410);
-    test->setAnchorPoint(Vec2(0.5, 0));
-    //    test->setScale(1.13);
-    this->addChild(test);
+    auto tmxInfo = TMXMapInfo::create("res/battle/arena/training/map.tmx");
+    
+    auto tileset = tmxInfo->getTilesets();
+    for (auto iter = tileset.begin(); iter != tileset.end(); ++iter){
+//        print("%d, %s", (*iter)->_firstGid, (*iter)->_originSourceImage.c_str());
+        sourceInfo[(*iter)->_firstGid] = (*iter)->_originSourceImage;
+    }
+    
+    
+    
+    auto objectGroups = tmxInfo->getObjectGroups();
+    TMXObjectGroup* mapInfo = nullptr;
+    for (auto iter = objectGroups.begin(); iter != objectGroups.end(); ++iter){
+        if ((*iter)->getGroupName() == "map"){
+            mapInfo = (*iter);
+            break;
+        }
+    }
+    
+    ValueVector mapObjects = mapInfo->getObjects();
+    for (auto iter = mapObjects.begin(); iter != mapObjects.end(); ++iter){
+        ValueMap objectValueMap = iter->asValueMap();
+        std::string sourceName = sourceInfo[objectValueMap["gid"].asInt()];
+//        print("gid: %d, %s, (%f, %f)", objectValueMap["gid"].asInt(), sourceName.c_str(), objectValueMap["x"].asFloat(), objectValueMap["y"].asFloat());
+        auto mapElement = Sprite::create(std::string("res/battle/arena/training/") + sourceName);
+        auto elementSize = mapElement->getContentSize();
+        mapElement->setAnchorPoint(Vec2(0, 0));
+        mapElement->setPosition(objectValueMap["x"].asFloat(), objectValueMap["y"].asFloat() + elementSize.height);
+        this->addChild(mapElement);
+    }
     
     auto drawNode = DrawNode::create();
     this->addChild(drawNode);
@@ -41,11 +69,11 @@ bool BattlegroundLayer::init(){
     int height = 18;
     
     for (int i = 0; i <= 36; ++i){
-        drawNode->drawLine(Vec2(startX + i * width, 0), Vec2(startX + i * width, visibleSize.height), Color4F(1, 1, 1, 1));
+        drawNode->drawLine(Vec2(startX + i * width, 0), Vec2(startX + i * width, visibleSize.height), Color4F(1, 1, 1, 0.3));
     }
     
     for (int i = 0; i <= 64; ++i){
-        drawNode->drawLine(Vec2(0, startY + i * height), Vec2(visibleSize.width, startY + i * height), Color4F(1, 1, 1, 1));
+        drawNode->drawLine(Vec2(0, startY + i * height), Vec2(visibleSize.width, startY + i * height), Color4F(1, 1, 1, 0.3));
     }
     
     return true;
