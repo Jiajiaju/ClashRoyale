@@ -54,8 +54,10 @@
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		5417986C201246960037C5C0 /* ConfigManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5417986A201246960037C5C0 /* ConfigManager.cpp */; };
 		541798732012588E0037C5C0 /* CSVParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 541798712012588E0037C5C0 /* CSVParser.cpp */; };
+		54179882201478C80037C5C0 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54179880201478C80037C5C0 /* Entity.cpp */; };
+		541798852014790C0037C5C0 /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 541798832014790C0037C5C0 /* Character.cpp */; };
+		54179888201481EE0037C5C0 /* CharacterAnimator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54179886201481EE0037C5C0 /* CharacterAnimator.cpp */; };
 		5459D6BF200B5CEB0034AFCA /* Debuger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5459D6BD200B5CEB0034AFCA /* Debuger.cpp */; };
-		5459D6C8200BAFC60034AFCA /* CRImport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5459D6C6200BAFC60034AFCA /* CRImport.cpp */; };
 		54B4B4FD1FFFD8AF00776BA3 /* BattlegroundLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54B4B4F61FFFD8AF00776BA3 /* BattlegroundLayer.cpp */; };
 		54B4B4FE1FFFD8AF00776BA3 /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54B4B4F91FFFD8AF00776BA3 /* BattleScene.cpp */; };
 		54B4B4FF1FFFD8AF00776BA3 /* BattleUILayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54B4B4FA1FFFD8AF00776BA3 /* BattleUILayer.cpp */; };
@@ -167,10 +169,15 @@
 		541798712012588E0037C5C0 /* CSVParser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CSVParser.cpp; sourceTree = "<group>"; };
 		541798722012588E0037C5C0 /* CSVParser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSVParser.hpp; sourceTree = "<group>"; };
 		54179876201465730037C5C0 /* CharacterModel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CharacterModel.hpp; sourceTree = "<group>"; };
+		54179880201478C80037C5C0 /* Entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		54179881201478C80037C5C0 /* Entity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
+		541798832014790C0037C5C0 /* Character.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Character.cpp; sourceTree = "<group>"; };
+		541798842014790C0037C5C0 /* Character.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Character.hpp; sourceTree = "<group>"; };
+		54179886201481EE0037C5C0 /* CharacterAnimator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterAnimator.cpp; sourceTree = "<group>"; };
+		54179887201481EE0037C5C0 /* CharacterAnimator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CharacterAnimator.hpp; sourceTree = "<group>"; };
 		5459D6BD200B5CEB0034AFCA /* Debuger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Debuger.cpp; sourceTree = "<group>"; };
 		5459D6BE200B5CEB0034AFCA /* Debuger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Debuger.hpp; sourceTree = "<group>"; };
 		5459D6C1200B86E30034AFCA /* Util.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Util.hpp; sourceTree = "<group>"; };
-		5459D6C6200BAFC60034AFCA /* CRImport.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CRImport.cpp; sourceTree = "<group>"; };
 		5459D6C7200BAFC60034AFCA /* CRImport.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CRImport.hpp; sourceTree = "<group>"; };
 		54B4B4F51FFFD8AF00776BA3 /* BattleUILayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BattleUILayer.hpp; sourceTree = "<group>"; };
 		54B4B4F61FFFD8AF00776BA3 /* BattlegroundLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BattlegroundLayer.cpp; sourceTree = "<group>"; };
@@ -335,7 +342,6 @@
 			children = (
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
-				5459D6C6200BAFC60034AFCA /* CRImport.cpp */,
 				5459D6C7200BAFC60034AFCA /* CRImport.hpp */,
 				541798742014654D0037C5C0 /* model */,
 				5417986D2012490B0037C5C0 /* generic */,
@@ -415,6 +421,8 @@
 		5417987820146CE50037C5C0 /* entity */ = {
 			isa = PBXGroup;
 			children = (
+				54179880201478C80037C5C0 /* Entity.cpp */,
+				54179881201478C80037C5C0 /* Entity.hpp */,
 				5417987920146CE50037C5C0 /* character */,
 			);
 			path = entity;
@@ -423,6 +431,10 @@
 		5417987920146CE50037C5C0 /* character */ = {
 			isa = PBXGroup;
 			children = (
+				541798832014790C0037C5C0 /* Character.cpp */,
+				541798842014790C0037C5C0 /* Character.hpp */,
+				54179886201481EE0037C5C0 /* CharacterAnimator.cpp */,
+				54179887201481EE0037C5C0 /* CharacterAnimator.hpp */,
 			);
 			path = character;
 			sourceTree = "<group>";
@@ -637,8 +649,9 @@
 				5459D6BF200B5CEB0034AFCA /* Debuger.cpp in Sources */,
 				54B4B5061FFFD8BA00776BA3 /* BattleManager.cpp in Sources */,
 				5417986C201246960037C5C0 /* ConfigManager.cpp in Sources */,
-				5459D6C8200BAFC60034AFCA /* CRImport.cpp in Sources */,
+				541798852014790C0037C5C0 /* Character.cpp in Sources */,
 				54B4B5071FFFD8BA00776BA3 /* GameManager.cpp in Sources */,
+				54179888201481EE0037C5C0 /* CharacterAnimator.cpp in Sources */,
 				54B4B4FD1FFFD8AF00776BA3 /* BattlegroundLayer.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				541798732012588E0037C5C0 /* CSVParser.cpp in Sources */,
@@ -648,6 +661,7 @@
 				54B4B4FE1FFFD8AF00776BA3 /* BattleScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				54179882201478C80037C5C0 /* Entity.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				54B4B4FF1FFFD8AF00776BA3 /* BattleUILayer.cpp in Sources */,
 			);

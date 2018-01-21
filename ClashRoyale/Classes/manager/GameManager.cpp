@@ -24,9 +24,18 @@ void GameManager::prepareGame(){
     battleManager = BattleManager::getInstance();
     
     configManager->loadCharacterConfig();
+    
+    cocos2d::Director::getInstance()->getScheduler()->schedule([this](float dt){
+        this->tick(dt);
+    }, cocos2d::Director::getInstance(), 0, false, "global_tick");
+    
 }
 
 void GameManager::startupGame(){
     battleManager->prepareBattle();
     battleManager->startBattle();
+}
+
+void GameManager::tick(float dt){
+    battleManager->tick(dt);
 }

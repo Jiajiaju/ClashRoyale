@@ -14,10 +14,10 @@
 #include <cctype>
 
 using namespace clash_royale;
+using namespace clash_royale::generic;
 using namespace clash_royale::manager;
 
 void ConfigManager::loadCharacterConfig(){
-    print("ConfigManager::loadCharacterConfig");
     
     auto fileFullPath = cocos2d::FileUtils::getInstance()->fullPathForFilename(ConfigFilePath::CharacterConfig);
     std::string data = cocos2d::FileUtils::getInstance()->getStringFromFile(fileFullPath);

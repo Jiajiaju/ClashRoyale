@@ -28,6 +28,8 @@ namespace clash_royale {
             
             void prepareGame();
             void startupGame();
+            
+            void tick(float dt);
         };
         
 #define GameManagerInstance clash_royale::manager::GameManager::getInstance()

@@ -15,4 +15,9 @@
 #include "Singleton.hpp"
 #include "Debuger.hpp"
 
+namespace clash_royale{
+    const float GlobalFrameRate = 60.0000000000;
+    const float AnimationFrameRate = 12.00000000;
+}
+
 #endif /* CRImport_hpp */
