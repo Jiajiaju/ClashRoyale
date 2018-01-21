@@ -11,6 +11,8 @@
 
 USING_NS_CC;
 
+using namespace clash_royale::battle;
+
 BattlegroundLayer* BattlegroundLayer::createBattlegroundLayer(){
     BattlegroundLayer* battlegroundLayer = new (std::nothrow) BattlegroundLayer();
     if (battlegroundLayer && battlegroundLayer->init()){

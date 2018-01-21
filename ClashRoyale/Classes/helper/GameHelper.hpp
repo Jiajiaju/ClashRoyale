@@ -12,10 +12,18 @@
 #include "Singleton.hpp"
 #include "cocos2d.h"
 
-class GameHelper: public Singleton<GameHelper>{
-private:
-public:
-    void init();
-};
+namespace clash_royale{
+    namespace helper{
+        
+        class GameHelper: public Singleton<GameHelper>{
+        private:
+        public:
+            void init();
+        };
+        
+    }
+}
+
+
 
 #endif /* GameHelper_hpp */

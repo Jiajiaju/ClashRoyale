@@ -16,19 +16,26 @@
 #include "ConfigManager.hpp"
 #include "BattleManager.hpp"
 
-class GameManager: public Singleton<GameManager>{
-private:
-public:
-    
-    static BattleManager* battleManager;
-    static ConfigManager* configManager;
-    
-    void prepareGame();
-    void startupGame();
-};
+namespace clash_royale {
+    namespace manager{
+        
+        class GameManager: public Singleton<GameManager>{
+        private:
+        public:
+            
+            static BattleManager* battleManager;
+            static ConfigManager* configManager;
+            
+            void prepareGame();
+            void startupGame();
+        };
+        
+#define GameManagerInstance clash_royale::manager::GameManager::getInstance()
+#define BattleManagerInstance clash_royale::manager::GameManager::getInstance()->battleManager
+#define ConfigManagerInstance clash_royale::manager::GameManager::getInstance()->configManager
+        
+    }
+}
 
-#define GameManagerInstance GameManager::getInstance()
-#define BattleManagerInstance GameManager::getInstance()->battleManager
-#define ConfigManagerInstance GameManager::getInstance()->configManager
 
 #endif /* GameManager_hpp */

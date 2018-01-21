@@ -11,13 +11,21 @@
 #include <stdio.h>
 #include "cocos2d.h"
 
-class BattlegroundLayer: public cocos2d::Node{
-private:
-public:
-    
-    static BattlegroundLayer* createBattlegroundLayer();
-    
-    virtual bool init();
-};
+namespace clash_royale{
+    namespace battle{
+        
+        class BattlegroundLayer: public cocos2d::Node{
+        private:
+        public:
+            
+            static BattlegroundLayer* createBattlegroundLayer();
+            
+            virtual bool init();
+        };
+        
+    }
+}
+
+
 
 #endif /* BattlegroundLayer_hpp */

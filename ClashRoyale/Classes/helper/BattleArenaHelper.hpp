@@ -12,14 +12,22 @@
 #include "cocos2d.h"
 #include "Singleton.hpp"
 
-enum class BattleArenaType{
-    training
-};
+namespace clash_royale{
+    namespace helper{
+        
+        enum class BattleArenaType{
+            training
+        };
+        
+        class BattleArenaHelper: public Singleton<BattleArenaHelper>{
+        private:
+        public:
+            static cocos2d::Node* getBattleArenaMap(BattleArenaType arenaType);
+        };
+        
+    }
+}
 
-class BattleArenaHelper: public Singleton<BattleArenaHelper>{
-private:
-public:
-    static cocos2d::Node* getBattleArenaMap(BattleArenaType arenaType);
-};
+
 
 #endif /* BattleArenaHelper_hpp */

@@ -7,6 +7,9 @@
 
 #include "GameHelper.hpp"
 
+using namespace clash_royale;
+using namespace clash_royale::helper;
+
 void GameHelper::init(){
     
 }

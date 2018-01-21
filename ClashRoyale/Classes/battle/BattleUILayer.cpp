@@ -9,6 +9,8 @@
 
 USING_NS_CC;
 
+using namespace clash_royale::battle;
+
 BattleUILayer* BattleUILayer::createBattleUILayer(){
     BattleUILayer* battleUILayer = new (std::nothrow) BattleUILayer();
     if (battleUILayer && battleUILayer->init()){

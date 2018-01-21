@@ -9,6 +9,8 @@
 
 USING_NS_CC;
 
+using namespace clash_royale::battle;
+
 BattleMapLayer* BattleMapLayer::createBattleMapLayer(){
     BattleMapLayer* battleMapLayer = new (std::nothrow) BattleMapLayer();
     if (battleMapLayer && battleMapLayer->init()){

@@ -54,7 +54,6 @@
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		5417986C201246960037C5C0 /* ConfigManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5417986A201246960037C5C0 /* ConfigManager.cpp */; };
 		541798732012588E0037C5C0 /* CSVParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 541798712012588E0037C5C0 /* CSVParser.cpp */; };
-		54179877201465730037C5C0 /* CharacterModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54179875201465730037C5C0 /* CharacterModel.cpp */; };
 		5459D6BF200B5CEB0034AFCA /* Debuger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5459D6BD200B5CEB0034AFCA /* Debuger.cpp */; };
 		5459D6C8200BAFC60034AFCA /* CRImport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5459D6C6200BAFC60034AFCA /* CRImport.cpp */; };
 		54B4B4FD1FFFD8AF00776BA3 /* BattlegroundLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54B4B4F61FFFD8AF00776BA3 /* BattlegroundLayer.cpp */; };
@@ -167,7 +166,6 @@
 		5417986F2012491D0037C5C0 /* ConfigFilePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConfigFilePath.hpp; sourceTree = "<group>"; };
 		541798712012588E0037C5C0 /* CSVParser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CSVParser.cpp; sourceTree = "<group>"; };
 		541798722012588E0037C5C0 /* CSVParser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSVParser.hpp; sourceTree = "<group>"; };
-		54179875201465730037C5C0 /* CharacterModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterModel.cpp; sourceTree = "<group>"; };
 		54179876201465730037C5C0 /* CharacterModel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CharacterModel.hpp; sourceTree = "<group>"; };
 		5459D6BD200B5CEB0034AFCA /* Debuger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Debuger.cpp; sourceTree = "<group>"; };
 		5459D6BE200B5CEB0034AFCA /* Debuger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Debuger.hpp; sourceTree = "<group>"; };
@@ -409,10 +407,24 @@
 		541798742014654D0037C5C0 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				54179875201465730037C5C0 /* CharacterModel.cpp */,
 				54179876201465730037C5C0 /* CharacterModel.hpp */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		5417987820146CE50037C5C0 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				5417987920146CE50037C5C0 /* character */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		5417987920146CE50037C5C0 /* character */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = character;
 			sourceTree = "<group>";
 		};
 		5459D6BB200B5CDD0034AFCA /* debuger */ = {
@@ -427,6 +439,7 @@
 		54B4B4F41FFFD8AF00776BA3 /* battle */ = {
 			isa = PBXGroup;
 			children = (
+				5417987820146CE50037C5C0 /* entity */,
 				54B4B4F51FFFD8AF00776BA3 /* BattleUILayer.hpp */,
 				54B4B4FA1FFFD8AF00776BA3 /* BattleUILayer.cpp */,
 				54B4B4FB1FFFD8AF00776BA3 /* BattlegroundLayer.hpp */,
@@ -637,7 +650,6 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				54B4B4FF1FFFD8AF00776BA3 /* BattleUILayer.cpp in Sources */,
-				54179877201465730037C5C0 /* CharacterModel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

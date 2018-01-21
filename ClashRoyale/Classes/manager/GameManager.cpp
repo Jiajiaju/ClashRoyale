@@ -10,6 +10,10 @@
 
 #include "CRImport.hpp"
 
+using namespace clash_royale;
+using namespace clash_royale::manager;
+using namespace clash_royale::helper;
+
 BattleManager* GameManager::battleManager = nullptr;
 ConfigManager* GameManager::configManager = nullptr;
 

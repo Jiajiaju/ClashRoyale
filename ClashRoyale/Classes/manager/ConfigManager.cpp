@@ -13,6 +13,9 @@
 #include <algorithm>
 #include <cctype>
 
+using namespace clash_royale;
+using namespace clash_royale::manager;
+
 void ConfigManager::loadCharacterConfig(){
     print("ConfigManager::loadCharacterConfig");
     

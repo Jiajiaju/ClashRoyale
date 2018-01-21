@@ -9,6 +9,9 @@
 
 USING_NS_CC;
 
+using namespace clash_royale;
+using namespace clash_royale::helper;
+
 Node* BattleArenaHelper::getBattleArenaMap(BattleArenaType arenaType){
-    
+    return nullptr;
 }

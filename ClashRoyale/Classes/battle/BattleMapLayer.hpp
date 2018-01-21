@@ -11,12 +11,20 @@
 #include <stdio.h>
 #include "cocos2d.h"
 
-class BattleMapLayer: public cocos2d::Node{
-private:
-public:
-    static BattleMapLayer* createBattleMapLayer();
-    
-    virtual bool init();
-};
+namespace clash_royale{
+    namespace battle{
+        
+        class BattleMapLayer: public cocos2d::Node{
+        private:
+        public:
+            static BattleMapLayer* createBattleMapLayer();
+            
+            virtual bool init();
+        };
+        
+    }
+}
+
+
 
 #endif /* BattleMapLayer_hpp */

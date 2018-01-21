@@ -12,12 +12,18 @@
 
 #include "CRImport.hpp"
 
-class ConfigManager: public Singleton<ConfigManager>{
-private:
-    
-public:
-    
-    static void loadCharacterConfig();
-};
+namespace clash_royale{
+    namespace manager{
+        
+        class ConfigManager: public Singleton<ConfigManager>{
+        private:
+            
+        public:
+            
+            static void loadCharacterConfig();
+        };
+        
+    }
+}
 
 #endif /* ConfigManager_hpp */

@@ -9,6 +9,8 @@
 
 USING_NS_CC;
 
+using namespace clash_royale::battle;
+
 BattleScene* BattleScene::createBattleScene(){
     BattleScene* scene = new (std::nothrow) BattleScene();
     if (scene && scene->init()){

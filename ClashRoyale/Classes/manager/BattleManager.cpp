@@ -8,6 +8,10 @@
 #include "BattleManager.hpp"
 #include "BattleScene.hpp"
 
+using namespace clash_royale;
+using namespace clash_royale::manager;
+using namespace clash_royale::battle;
+
 void BattleManager::prepareBattle(){
     
 }

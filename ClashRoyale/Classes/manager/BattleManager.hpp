@@ -17,17 +17,25 @@
 #include "BattlegroundLayer.hpp"
 #include "BattleUILayer.hpp"
 
-class BattleManager: public Singleton<BattleManager>{
-private:
-    
-    BattleScene* _battleScene = nullptr;
-    BattleMapLayer* _battleMapLayer = nullptr;
-    BattlegroundLayer* _battlegroundLayer = nullptr;
-    BattleUILayer* _battleUILayer = nullptr;
-    
-public:
-    void prepareBattle();
-    void startBattle();
-};
+namespace clash_royale {
+    namespace manager{
+        
+        class BattleManager: public Singleton<BattleManager>{
+        private:
+            
+            battle::BattleScene* _battleScene = nullptr;
+            battle::BattleMapLayer* _battleMapLayer = nullptr;
+            battle::BattlegroundLayer* _battlegroundLayer = nullptr;
+            battle::BattleUILayer* _battleUILayer = nullptr;
+            
+        public:
+            void prepareBattle();
+            void startBattle();
+        };
+        
+    }
+}
+
+
 
 #endif /* BattleManager_hpp */
