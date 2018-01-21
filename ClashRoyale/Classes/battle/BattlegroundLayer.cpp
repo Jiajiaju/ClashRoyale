@@ -36,8 +36,6 @@ bool BattlegroundLayer::init(){
         sourceInfo[(*iter)->_firstGid] = (*iter)->_originSourceImage;
     }
     
-    
-    
     auto objectGroups = tmxInfo->getObjectGroups();
     TMXObjectGroup* mapInfo = nullptr;
     for (auto iter = objectGroups.begin(); iter != objectGroups.end(); ++iter){

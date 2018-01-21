@@ -13,6 +13,7 @@
 
 #include "cocos2d.h"
 
+#include "ConfigManager.hpp"
 #include "BattleManager.hpp"
 
 class GameManager: public Singleton<GameManager>{
@@ -20,6 +21,7 @@ private:
 public:
     
     static BattleManager* battleManager;
+    static ConfigManager* configManager;
     
     void prepareGame();
     void startupGame();
@@ -27,5 +29,6 @@ public:
 
 #define GameManagerInstance GameManager::getInstance()
 #define BattleManagerInstance GameManager::getInstance()->battleManager
+#define ConfigManagerInstance GameManager::getInstance()->configManager
 
 #endif /* GameManager_hpp */

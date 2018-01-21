@@ -12,6 +12,7 @@
 
 #include "cocos2d.h"
 #include "Util.hpp"
+#include "Singleton.hpp"
 #include "Debuger.hpp"
 
 #endif /* CRImport_hpp */

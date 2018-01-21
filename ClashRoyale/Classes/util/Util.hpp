@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
+#include <vector>
 
 inline int stringToInt(const std::string& str){
     return atoi(str.c_str());
@@ -25,5 +26,20 @@ inline std::string intToString(int number){
     newStr << number;
     return newStr.str();
 }
+
+inline std::vector<std::string> split(const std::string& source, char seperator){
+    std::vector<std::string> result;
+    unsigned long sourceSize = source.size();
+    for (unsigned long index = 0; index < sourceSize; ++index){
+        if (source[index] == seperator){
+            std::cout << "OK!" << source[index];
+        }
+    }
+    return result;
+}
+
+// todo
+//inline std::vector<std::string> split(const std::string& source, const std::string& seperator){
+//}
 
 #endif /* Util_hpp */

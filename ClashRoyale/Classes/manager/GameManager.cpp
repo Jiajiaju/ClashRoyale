@@ -11,11 +11,15 @@
 #include "CRImport.hpp"
 
 BattleManager* GameManager::battleManager = nullptr;
+ConfigManager* GameManager::configManager = nullptr;
 
 void GameManager::prepareGame(){
     GameHelper::getInstance()->init();
     
+    configManager = ConfigManager::getInstance();
     battleManager = BattleManager::getInstance();
+    
+    configManager->loadCharacterConfig();
 }
 
 void GameManager::startupGame(){
