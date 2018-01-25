@@ -58,6 +58,7 @@
 		541798852014790C0037C5C0 /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 541798832014790C0037C5C0 /* Character.cpp */; };
 		54179888201481EE0037C5C0 /* CharacterAnimator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54179886201481EE0037C5C0 /* CharacterAnimator.cpp */; };
 		5459D6BF200B5CEB0034AFCA /* Debuger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5459D6BD200B5CEB0034AFCA /* Debuger.cpp */; };
+		545B0333201A3294001DDB42 /* Puppet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 545B0331201A3294001DDB42 /* Puppet.cpp */; };
 		54B4B4FD1FFFD8AF00776BA3 /* BattlegroundLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54B4B4F61FFFD8AF00776BA3 /* BattlegroundLayer.cpp */; };
 		54B4B4FE1FFFD8AF00776BA3 /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54B4B4F91FFFD8AF00776BA3 /* BattleScene.cpp */; };
 		54B4B4FF1FFFD8AF00776BA3 /* BattleUILayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54B4B4FA1FFFD8AF00776BA3 /* BattleUILayer.cpp */; };
@@ -179,6 +180,12 @@
 		5459D6BE200B5CEB0034AFCA /* Debuger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Debuger.hpp; sourceTree = "<group>"; };
 		5459D6C1200B86E30034AFCA /* Util.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Util.hpp; sourceTree = "<group>"; };
 		5459D6C7200BAFC60034AFCA /* CRImport.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CRImport.hpp; sourceTree = "<group>"; };
+		545B0329201A2623001DDB42 /* Vector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector.hpp; sourceTree = "<group>"; };
+		545B032C201A27A9001DDB42 /* Physics.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Physics.hpp; sourceTree = "<group>"; };
+		545B032F201A2816001DDB42 /* Transform.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Transform.hpp; sourceTree = "<group>"; };
+		545B0331201A3294001DDB42 /* Puppet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Puppet.cpp; sourceTree = "<group>"; };
+		545B0332201A3294001DDB42 /* Puppet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Puppet.hpp; sourceTree = "<group>"; };
+		545B0335201A3641001DDB42 /* Combat.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Combat.hpp; sourceTree = "<group>"; };
 		54B4B4F51FFFD8AF00776BA3 /* BattleUILayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BattleUILayer.hpp; sourceTree = "<group>"; };
 		54B4B4F61FFFD8AF00776BA3 /* BattlegroundLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BattlegroundLayer.cpp; sourceTree = "<group>"; };
 		54B4B4F71FFFD8AF00776BA3 /* BattleMapLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BattleMapLayer.hpp; sourceTree = "<group>"; };
@@ -423,6 +430,7 @@
 			children = (
 				54179880201478C80037C5C0 /* Entity.cpp */,
 				54179881201478C80037C5C0 /* Entity.hpp */,
+				545B0327201A2614001DDB42 /* component */,
 				5417987920146CE50037C5C0 /* character */,
 			);
 			path = entity;
@@ -446,6 +454,19 @@
 				5459D6BE200B5CEB0034AFCA /* Debuger.hpp */,
 			);
 			path = debuger;
+			sourceTree = "<group>";
+		};
+		545B0327201A2614001DDB42 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				545B0329201A2623001DDB42 /* Vector.hpp */,
+				545B032C201A27A9001DDB42 /* Physics.hpp */,
+				545B032F201A2816001DDB42 /* Transform.hpp */,
+				545B0331201A3294001DDB42 /* Puppet.cpp */,
+				545B0332201A3294001DDB42 /* Puppet.hpp */,
+				545B0335201A3641001DDB42 /* Combat.hpp */,
+			);
+			path = component;
 			sourceTree = "<group>";
 		};
 		54B4B4F41FFFD8AF00776BA3 /* battle */ = {
@@ -661,6 +682,7 @@
 				54B4B4FE1FFFD8AF00776BA3 /* BattleScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				545B0333201A3294001DDB42 /* Puppet.cpp in Sources */,
 				54179882201478C80037C5C0 /* Entity.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				54B4B4FF1FFFD8AF00776BA3 /* BattleUILayer.cpp in Sources */,

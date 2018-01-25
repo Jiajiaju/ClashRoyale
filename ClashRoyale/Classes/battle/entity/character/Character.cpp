@@ -20,9 +20,9 @@ Character* Character::createCharacter(){
 }
 
 void Character::init(){
-    _avatar = CharacterAnimator::createCharacterAnimator();
-    _avatar->setPosition(300, 900);
-    BattleManagerInstance->addCharacter(this);
+//    _avatar = CharacterAnimator::createCharacterAnimator();
+//    _avatar->setPosition(300, 900);
+//    BattleManagerInstance->addCharacter(this);
 }
 
 void Character::destroy(){
@@ -34,8 +34,8 @@ Character::~Character(){
 }
 
 void Character::tick(float dt){
-    CharacterAnimator* avatar = static_cast<CharacterAnimator*>(_avatar);
-    avatar->tick(dt);
+//    CharacterAnimator* avatar = static_cast<CharacterAnimator*>(_avatar);
+//    avatar->tick(dt);
 }
 
 

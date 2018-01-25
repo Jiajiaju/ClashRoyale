@@ -52,5 +52,15 @@ void BattleManager::addCharacter(Character* character){
 }
 
 void BattleManager::__TestFunc(){
-    Character::createCharacter();
+    Character* newCharacter = Character::createCharacter();
+    
+    Physics newPhysics;
+    newPhysics.mass = 10;
+    newPhysics.radius = 20;
+    
+    Transform newTransform;
+    
+    newCharacter->initBaseProperty(newPhysics, newTransform);
+    newCharacter->getPuppet()->setPosition(300, 900);
+    _battlegroundLayer->addChild(newCharacter->getPuppet());
 }

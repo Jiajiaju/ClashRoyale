@@ -11,6 +11,12 @@
 #include <stdio.h>
 #include "cocos2d.h"
 
+#include "Physics.hpp"
+#include "Transform.hpp"
+#include "Combat.hpp"
+
+#include "Puppet.hpp"
+
 namespace clash_royale {
     namespace battle{
         
@@ -18,8 +24,16 @@ namespace clash_royale {
         private:
         protected:
             cocos2d::Node* _avatar = nullptr;
+            Puppet* _puppet = nullptr;
         public:
             virtual ~Entity() = 0;
+            
+            Physics physics;
+            Transform transform;
+            
+            Puppet* getPuppet(){ return _puppet; }
+            
+            void initBaseProperty(Physics basePhysice, Transform baseTransform);
         };
         
     }
